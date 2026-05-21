@@ -23,6 +23,18 @@
               teal: '#00bceb',
               green: '#6cc04a',
               sky: '#64bbe3',
+            },
+            splunk: {
+              teal: '#006D9C',
+              green: '#53A051',
+              sage: '#4FA484',
+              orange: '#F1813F',
+              coral: '#EC9960',
+              red: '#DC4E41',
+              yellow: '#F8BE34',
+              slate: '#3C444D',
+              navy: '#294E70',
+              mint: '#62B3B2',
             }
           }
         }
@@ -36,15 +48,19 @@
   <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 no-print">
     <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <svg class="h-7" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" aria-label="Cisco logo">
+        <svg class="h-8" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg" aria-label="Cisco logo">
           <g fill="#049fd9">
-            <rect x="10" y="20" width="4" height="20" rx="2"/>
-            <rect x="18" y="12" width="4" height="36" rx="2"/>
-            <rect x="26" y="6" width="4" height="48" rx="2"/>
-            <rect x="34" y="12" width="4" height="36" rx="2"/>
-            <rect x="42" y="20" width="4" height="20" rx="2"/>
+            <rect x="8" y="30" width="3.5" height="14" rx="1.75"/>
+            <rect x="15" y="24" width="3.5" height="20" rx="1.75"/>
+            <rect x="22" y="16" width="3.5" height="28" rx="1.75"/>
+            <rect x="29" y="10" width="3.5" height="34" rx="1.75"/>
+            <rect x="36" y="6" width="3.5" height="38" rx="1.75"/>
+            <rect x="43" y="10" width="3.5" height="34" rx="1.75"/>
+            <rect x="50" y="16" width="3.5" height="28" rx="1.75"/>
+            <rect x="57" y="24" width="3.5" height="20" rx="1.75"/>
+            <rect x="64" y="30" width="3.5" height="14" rx="1.75"/>
           </g>
-          <text x="56" y="42" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="28" fill="#171f2d">cisco</text>
+          <text x="78" y="42" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="30" letter-spacing="1" fill="#171f2d">cisco</text>
         </svg>
         <div class="w-px h-6 bg-slate-300"></div>
         <span class="font-bold text-lg tracking-tight text-cisco-dark">People AI Factory</span>
@@ -228,15 +244,15 @@
             <!-- Expanded content -->
             <div x-show="expandedRole === role.id" x-transition>
               <!-- Current State -->
-              <div class="p-6 bg-red-50/50 border-b border-slate-100">
-                <div class="flex items-center gap-2 text-red-700 font-semibold text-sm mb-3">
+              <div class="p-6 bg-splunk-red/5 border-b border-slate-100">
+                <div class="flex items-center gap-2 text-splunk-red font-semibold text-sm mb-3">
                   <i data-lucide="alert-circle" class="w-4 h-4"></i>
                   TODAY: Pain Points
                 </div>
                 <ul class="space-y-2">
                   <template x-for="pain in role.currentState.painPoints" :key="pain">
-                    <li class="flex items-start gap-2 text-sm text-red-800/70">
-                      <i data-lucide="x-circle" class="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0"></i>
+                    <li class="flex items-start gap-2 text-sm text-splunk-red/70">
+                      <i data-lucide="x-circle" class="w-4 h-4 text-splunk-red/50 mt-0.5 flex-shrink-0"></i>
                       <span x-text="pain"></span>
                     </li>
                   </template>
@@ -244,18 +260,18 @@
               </div>
 
               <!-- Factory State -->
-              <div class="p-6 bg-emerald-50/50 border-b border-slate-100">
-                <div class="flex items-center gap-2 text-emerald-700 font-semibold text-sm mb-1">
+              <div class="p-6 bg-splunk-green/5 border-b border-slate-100">
+                <div class="flex items-center gap-2 text-splunk-green font-semibold text-sm mb-1">
                   <i data-lucide="sparkles" class="w-4 h-4"></i>
                   AI FACTORY: <span x-text="role.factoryState.newRole"></span>
                 </div>
-                <p class="text-sm text-emerald-800/70 mb-4" x-text="role.factoryState.summary"></p>
+                <p class="text-sm text-splunk-green/70 mb-4" x-text="role.factoryState.summary"></p>
                 
                 <!-- Agents -->
-                <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-3">Agent Opportunities</div>
+                <div class="text-xs font-semibold text-splunk-sage uppercase tracking-wider mb-3">Agent Opportunities</div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <template x-for="agent in role.factoryState.agents" :key="agent.name">
-                    <div class="bg-white rounded-lg p-3 border border-emerald-200">
+                    <div class="bg-white rounded-lg p-3 border border-splunk-green/20">
                       <div class="font-semibold text-sm text-slate-800" x-text="agent.name"></div>
                       <div class="text-xs text-slate-500 mt-1" x-text="agent.desc"></div>
                     </div>
@@ -264,25 +280,25 @@
               </div>
 
               <!-- KPIs -->
-              <div class="p-6">
-                <div class="flex items-center gap-2 text-blue-700 font-semibold text-sm mb-3">
+              <div class="p-6 bg-splunk-teal/5">
+                <div class="flex items-center gap-2 text-splunk-teal font-semibold text-sm mb-3">
                   <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
                   IMPACT METRICS
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                   <template x-for="kpi in role.factoryState.kpis" :key="kpi.metric">
-                    <div class="bg-slate-50 rounded-lg p-3">
-                      <div class="text-xs font-medium text-slate-400 mb-2" x-text="kpi.metric"></div>
+                    <div class="bg-white rounded-lg p-3 border border-splunk-teal/15">
+                      <div class="text-xs font-medium text-splunk-slate mb-2" x-text="kpi.metric"></div>
                       <div class="flex items-center gap-2">
-                        <span class="text-xs font-medium text-red-500 line-through" x-text="kpi.before"></span>
+                        <span class="text-xs font-medium text-splunk-red line-through" x-text="kpi.before"></span>
                         <i data-lucide="arrow-right" class="w-3 h-3 text-slate-400"></i>
-                        <span class="text-sm font-bold text-emerald-600" x-text="kpi.after"></span>
+                        <span class="text-sm font-bold text-splunk-green" x-text="kpi.after"></span>
                       </div>
                     </div>
                   </template>
                 </div>
                 <!-- Maturity path -->
-                <div class="mt-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+                <div class="mt-4 bg-gradient-to-r from-cisco-blue/5 to-splunk-teal/10 rounded-lg p-4">
                   <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Maturity Path</div>
                   <div class="text-sm font-medium text-slate-700" x-text="role.maturityPath"></div>
                 </div>
@@ -544,15 +560,19 @@
   <footer class="bg-slate-900 text-slate-400 py-8">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <svg class="h-5" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" aria-label="Cisco logo">
+        <svg class="h-5" viewBox="0 0 300 70" xmlns="http://www.w3.org/2000/svg" aria-label="Cisco logo">
           <g fill="#049fd9">
-            <rect x="10" y="20" width="4" height="20" rx="2"/>
-            <rect x="18" y="12" width="4" height="36" rx="2"/>
-            <rect x="26" y="6" width="4" height="48" rx="2"/>
-            <rect x="34" y="12" width="4" height="36" rx="2"/>
-            <rect x="42" y="20" width="4" height="20" rx="2"/>
+            <rect x="8" y="30" width="3.5" height="14" rx="1.75"/>
+            <rect x="15" y="24" width="3.5" height="20" rx="1.75"/>
+            <rect x="22" y="16" width="3.5" height="28" rx="1.75"/>
+            <rect x="29" y="10" width="3.5" height="34" rx="1.75"/>
+            <rect x="36" y="6" width="3.5" height="38" rx="1.75"/>
+            <rect x="43" y="10" width="3.5" height="34" rx="1.75"/>
+            <rect x="50" y="16" width="3.5" height="28" rx="1.75"/>
+            <rect x="57" y="24" width="3.5" height="20" rx="1.75"/>
+            <rect x="64" y="30" width="3.5" height="14" rx="1.75"/>
           </g>
-          <text x="56" y="42" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="28" fill="#94a3b8">cisco</text>
+          <text x="78" y="42" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="30" letter-spacing="1" fill="#94a3b8">cisco</text>
         </svg>
         <span class="text-sm">People AI Factory — CX Transformation</span>
       </div>
