@@ -175,70 +175,37 @@ const FRAMEWORK = {
 
 const CX_ROLES = [
   {
-    id: "csm",
-    title: "Customer Success Manager",
-    abbrev: "CSM",
+    id: "cxm",
+    title: "Customer Experience Manager",
+    abbrev: "CXM",
     icon: "heart-handshake",
     color: "blue",
     currentState: {
-      summary: "Manages customer health, drives adoption, and ensures renewals through relationship management and manual account monitoring.",
+      summary: "The primary customer-facing role in Cisco CX — owns the overall customer experience lifecycle, drives adoption and value realization, manages escalations, and serves as the quarterback of the customer relationship across all CX functions.",
       painPoints: [
-        "Manually tracking health scores across dozens of accounts",
-        "Reactive — issues surface through customer complaints",
-        "Time spent compiling QBR decks instead of strategizing",
-        "Renewal risk identified too late to intervene"
+        "Juggling dozens of accounts with no real-time visibility into customer health",
+        "Reactive firefighting — issues surface through complaints, not early signals",
+        "Hours spent manually compiling business reviews and status updates",
+        "Cross-functional coordination across CEs, PMs, and CDAs relies on email and meetings"
       ]
     },
     factoryState: {
-      newRole: "Customer Success Architect",
-      summary: "Designs and orchestrates AI agents that continuously monitor customer health, predict risk, drive proactive engagement, and auto-generate strategic insights.",
+      newRole: "Customer Experience Architect",
+      summary: "Orchestrates AI agents that continuously monitor customer health, predict risk, synthesize cross-functional intelligence, and draft proactive engagement — freeing the CXM to focus on strategic relationships and customer outcomes.",
       agents: [
-        { name: "Health Pulse Agent", desc: "Continuously monitors product telemetry, support tickets, and engagement signals to produce real-time health scores" },
-        { name: "Renewal Risk Predictor", desc: "Analyzes patterns across data sources to flag at-risk renewals 90+ days before expiry" },
-        { name: "QBR Generator", desc: "Auto-compiles quarterly business review decks from usage data, tickets, and outcomes" },
-        { name: "Proactive Outreach Drafter", desc: "Drafts personalized outreach emails based on health signals (human approves before send)" }
+        { name: "Customer Health Pulse", desc: "Aggregates telemetry, support cases, adoption signals, and engagement data into a real-time health score per account" },
+        { name: "Business Review Generator", desc: "Auto-compiles quarterly and executive business reviews from usage data, delivery milestones, and outcomes" },
+        { name: "Proactive Outreach Drafter", desc: "Drafts personalized customer communications based on health signals (human approves before send)" },
+        { name: "Cross-Functional Coordinator", desc: "Synthesizes status from CE, PM, and CDA workstreams into a unified customer view and flags gaps" }
       ],
       kpis: [
         { metric: "Time to Risk Detection", before: "Weeks", after: "Hours" },
-        { metric: "QBR Prep Time", before: "8-12 hours", after: "30 min review" },
-        { metric: "Accounts per CSM", before: "15-25", after: "50-75" },
+        { metric: "Business Review Prep", before: "8-12 hours", after: "30 min review" },
+        { metric: "Accounts per CXM", before: "15-25", after: "40-60" },
         { metric: "Proactive vs Reactive Ratio", before: "20/80", after: "70/30" }
       ]
     },
-    maturityPath: "Manual health checks → AI-assisted scoring → Agent-driven engagement → Autonomous success orchestration"
-  },
-  {
-    id: "tam",
-    title: "Technical Account Manager",
-    abbrev: "TAM",
-    icon: "cpu",
-    color: "indigo",
-    currentState: {
-      summary: "Provides proactive technical guidance, manages escalations, and ensures customers get maximum value from deployed solutions.",
-      painPoints: [
-        "Drowning in case management and escalation handling",
-        "Technical advice is reactive, not anticipatory",
-        "Knowledge trapped in individual expertise silos",
-        "Limited time for strategic technical planning"
-      ]
-    },
-    factoryState: {
-      newRole: "Technical Intelligence Architect",
-      summary: "Designs agents that monitor technical environments, predict issues before they happen, auto-triage cases, and deliver proactive technical recommendations.",
-      agents: [
-        { name: "Environment Health Monitor", desc: "Continuously analyzes customer infrastructure telemetry and flags anomalies before they become incidents" },
-        { name: "Case Classification Agent", desc: "Auto-classifies incoming cases by severity, product, and likely resolution path" },
-        { name: "Knowledge Synthesizer", desc: "Mines TAC cases, release notes, and bugs to surface relevant intelligence per customer context" },
-        { name: "Technical Advisory Drafter", desc: "Generates proactive technical recommendations based on environment changes and known issues" }
-      ],
-      kpis: [
-        { metric: "Mean Time to Case Classification", before: "2-4 hours", after: "< 5 min" },
-        { metric: "Proactive Issue Detection", before: "10%", after: "60%+" },
-        { metric: "Time Spent on Escalation Mgmt", before: "40% of week", after: "15%" },
-        { metric: "Knowledge Reuse Rate", before: "Low", after: "80%+" }
-      ]
-    },
-    maturityPath: "Manual case triage → AI-assisted classification → Agent-driven monitoring → Autonomous technical operations"
+    maturityPath: "Manual account management → AI-assisted health monitoring → Agent-driven engagement → Autonomous experience orchestration"
   },
   {
     id: "htom",
@@ -247,22 +214,22 @@ const CX_ROLES = [
     icon: "settings",
     color: "violet",
     currentState: {
-      summary: "Oversees operational delivery for high-value customers, coordinating resources, tracking SLAs, and managing complex engagements.",
+      summary: "Oversees operational delivery for Cisco's highest-value customers — coordinating resources, tracking SLA compliance, managing complex multi-workstream engagements, and ensuring operational excellence across the delivery lifecycle.",
       painPoints: [
-        "Manually tracking SLAs and deliverables across multiple workstreams",
-        "Resource coordination across time zones is error-prone",
-        "Status reporting consumes days of effort each cycle",
-        "Early warning signs of delivery risk are missed"
+        "Manually tracking SLAs and deliverables across multiple concurrent engagements",
+        "Resource coordination across global time zones is error-prone and slow",
+        "Operational status reporting consumes days of effort each cycle",
+        "Early warning signs of delivery risk are missed until they become escalations"
       ]
     },
     factoryState: {
       newRole: "Operations Intelligence Lead",
-      summary: "Architects agents that automate operational oversight — real-time SLA tracking, resource optimization, risk detection, and automated stakeholder reporting.",
+      summary: "Architects agents that automate operational oversight — real-time SLA tracking, predictive resource optimization, delivery risk detection, and automated stakeholder reporting across the high-touch portfolio.",
       agents: [
-        { name: "SLA Sentinel", desc: "Real-time SLA monitoring with automatic alerting when thresholds approach breach" },
-        { name: "Resource Optimizer", desc: "Analyzes workload, skills, and availability to recommend optimal resource allocation" },
-        { name: "Status Report Generator", desc: "Auto-compiles delivery status reports from project tools, tickets, and milestones" },
-        { name: "Delivery Risk Radar", desc: "Scans engagement data patterns to flag delivery risks before they materialize" }
+        { name: "SLA Sentinel", desc: "Real-time SLA monitoring with automatic alerting when thresholds approach breach across all active engagements" },
+        { name: "Resource Optimizer", desc: "Analyzes workload, skills, availability, and time zones to recommend optimal resource allocation" },
+        { name: "Ops Status Generator", desc: "Auto-compiles operational status reports from project tools, delivery milestones, and team inputs" },
+        { name: "Delivery Risk Radar", desc: "Scans engagement patterns, resource gaps, and SLA trends to flag delivery risks before they materialize" }
       ],
       kpis: [
         { metric: "Status Report Creation", before: "1-2 days", after: "Auto-generated" },
@@ -274,28 +241,28 @@ const CX_ROLES = [
     maturityPath: "Manual tracking → AI-assisted monitoring → Agent-driven operations → Autonomous delivery orchestration"
   },
   {
-    id: "dpm",
-    title: "Delivery Project Manager",
-    abbrev: "DPM",
+    id: "pm",
+    title: "Customer Project Manager",
+    abbrev: "PM",
     icon: "gantt-chart",
     color: "sky",
     currentState: {
-      summary: "Manages implementation projects end-to-end — planning, scheduling, risk management, and stakeholder communication for CX engagements.",
+      summary: "Manages customer implementation projects end-to-end — planning, scheduling, resource coordination, risk management, and stakeholder communication across CX delivery engagements.",
       painPoints: [
-        "Project plans go stale within days of creation",
-        "Manual dependency tracking leads to missed connections",
-        "Stakeholder updates are time-consuming and repetitive",
-        "Lessons learned rarely get captured or reused"
+        "Project plans go stale within days of creation as realities shift",
+        "Manual dependency tracking across CEs, CDAs, and customer teams leads to missed handoffs",
+        "Stakeholder updates are time-consuming, repetitive, and often inconsistent",
+        "Lessons learned from past projects rarely get captured or reused systematically"
       ]
     },
     factoryState: {
-      newRole: "Delivery Automation Architect",
-      summary: "Designs agents that keep project plans alive, automate stakeholder communication, predict schedule risks, and capture institutional knowledge automatically.",
+      newRole: "Delivery Intelligence Manager",
+      summary: "Designs agents that keep project plans alive in real time, automate stakeholder communication at the right level of detail, predict schedule risks from historical patterns, and systematically harvest lessons learned.",
       agents: [
-        { name: "Living Plan Agent", desc: "Continuously updates project plans based on actual progress, dependencies, and team velocity" },
-        { name: "Stakeholder Communicator", desc: "Drafts and sends project updates tailored to each stakeholder's level of detail" },
-        { name: "Schedule Risk Predictor", desc: "Analyzes historical delivery patterns to predict delays before they happen" },
-        { name: "Lessons Learned Harvester", desc: "Auto-captures project outcomes, decisions, and patterns for future reuse" }
+        { name: "Living Plan Agent", desc: "Continuously updates project plans based on actual progress, dependency shifts, and team velocity" },
+        { name: "Stakeholder Communicator", desc: "Drafts tailored project updates — executive summary for leaders, technical detail for CEs and CDAs" },
+        { name: "Schedule Risk Predictor", desc: "Analyzes historical Cisco delivery patterns to predict delays and recommend mitigations" },
+        { name: "Lessons Learned Harvester", desc: "Auto-captures project outcomes, decisions, and reusable patterns for future engagements" }
       ],
       kpis: [
         { metric: "Plan Accuracy", before: "Degrades weekly", after: "Real-time accurate" },
@@ -307,160 +274,94 @@ const CX_ROLES = [
     maturityPath: "Static plans → AI-assisted updates → Agent-driven project management → Autonomous delivery orchestration"
   },
   {
-    id: "sa",
-    title: "Solution Architect",
-    abbrev: "SA",
+    id: "cda",
+    title: "Customer Delivery Architect",
+    abbrev: "CDA",
     icon: "blocks",
     color: "emerald",
     currentState: {
-      summary: "Designs technical solutions for customer environments, bridging business requirements with product capabilities and integration architectures.",
+      summary: "The technical architecture lead for customer deliveries — designs solutions, validates technical approaches, creates high-level and low-level designs, and ensures implementations align with Cisco best practices and customer requirements.",
       painPoints: [
-        "Recreating similar solution designs from scratch each time",
-        "Keeping up with rapidly changing product capabilities",
-        "Compatibility and integration validation is manual",
-        "Design documentation takes weeks to complete"
+        "Recreating similar architecture designs from scratch for each engagement",
+        "Keeping up with rapidly evolving Cisco product capabilities and compatibility",
+        "Design validation and documentation takes weeks of manual effort",
+        "Technical debt from inconsistent design patterns across engagements"
       ]
     },
     factoryState: {
-      newRole: "Solution Intelligence Architect",
-      summary: "Leverages agents that accelerate solution design through pattern matching, auto-validation, intelligent documentation, and continuous product intelligence.",
+      newRole: "Delivery Architecture Intelligence Lead",
+      summary: "Leverages agents that accelerate solution architecture through pattern matching against proven designs, automated compatibility validation, intelligent design documentation, and continuous Cisco product intelligence.",
       agents: [
-        { name: "Solution Pattern Matcher", desc: "Matches customer requirements against proven design patterns and past successful implementations" },
-        { name: "Compatibility Validator", desc: "Automatically validates solution designs against known compatibility matrices and constraints" },
-        { name: "Design Doc Generator", desc: "Creates comprehensive solution documents from structured inputs and validated patterns" },
-        { name: "Product Intelligence Feed", desc: "Continuously monitors product updates, EOL notices, and feature changes relevant to active designs" }
+        { name: "Architecture Pattern Matcher", desc: "Matches customer requirements against proven Cisco design patterns and past successful implementations" },
+        { name: "Compatibility Validator", desc: "Automatically validates designs against Cisco compatibility matrices, EOL data, and known constraints" },
+        { name: "Design Doc Generator", desc: "Creates comprehensive HLD/LLD documents from structured inputs and validated architecture patterns" },
+        { name: "Product Intelligence Feed", desc: "Continuously monitors Cisco product updates, release notes, bugs, and feature changes relevant to active designs" }
       ],
       kpis: [
-        { metric: "Solution Design Time", before: "2-4 weeks", after: "2-3 days" },
+        { metric: "Architecture Design Time", before: "2-4 weeks", after: "2-3 days" },
         { metric: "Design Rework Rate", before: "30%", after: "< 10%" },
         { metric: "Pattern Reuse", before: "Informal", after: "80% from library" },
         { metric: "Product Knowledge Currency", before: "Quarterly refresh", after: "Real-time" }
       ]
     },
-    maturityPath: "Manual design → AI-assisted validation → Agent-driven design generation → Autonomous solution engineering"
+    maturityPath: "Manual design → AI-assisted validation → Agent-driven architecture generation → Autonomous solution engineering"
   },
   {
-    id: "renewals",
-    title: "Renewals Manager",
-    abbrev: "RM",
-    icon: "refresh-cw",
-    color: "amber",
-    currentState: {
-      summary: "Manages the contract renewal pipeline, identifies expansion opportunities, and works to retain revenue across the customer base.",
-      painPoints: [
-        "Renewal pipeline is managed in spreadsheets with stale data",
-        "Upsell/cross-sell opportunities identified by chance",
-        "Quote generation is manual and error-prone",
-        "Customer sentiment before renewal is a black box"
-      ]
-    },
-    factoryState: {
-      newRole: "Revenue Intelligence Manager",
-      summary: "Orchestrates agents that maintain a live renewal pipeline, predict churn, identify expansion signals, and automate quote preparation with human-approved pricing.",
-      agents: [
-        { name: "Pipeline Pulse Agent", desc: "Maintains real-time renewal pipeline with auto-updated dates, values, and risk scores" },
-        { name: "Expansion Signal Detector", desc: "Analyzes usage patterns, support interactions, and market signals to surface upsell opportunities" },
-        { name: "Quote Accelerator", desc: "Auto-generates renewal and expansion quotes based on current contracts and pricing rules" },
-        { name: "Sentiment Analyzer", desc: "Gauges customer sentiment from communications and interactions leading up to renewal" }
-      ],
-      kpis: [
-        { metric: "Renewal Forecast Accuracy", before: "75%", after: "95%+" },
-        { metric: "Upsell Pipeline Generated", before: "Manual sourcing", after: "Agent-identified" },
-        { metric: "Quote Generation Time", before: "1-3 days", after: "Minutes" },
-        { metric: "Retention Rate", before: "Baseline", after: "+5-10 pts" }
-      ]
-    },
-    maturityPath: "Spreadsheet tracking → AI-assisted forecasting → Agent-driven pipeline management → Autonomous revenue operations"
-  },
-  {
-    id: "adoption",
-    title: "Adoption Specialist",
-    abbrev: "AS",
-    icon: "graduation-cap",
-    color: "teal",
-    currentState: {
-      summary: "Drives product adoption by creating enablement content, running workshops, tracking feature utilization, and guiding customers through their adoption journey.",
-      painPoints: [
-        "Adoption plans are generic, not personalized to each customer",
-        "Usage data analysis is manual and lagging",
-        "Content creation for enablement takes significant time",
-        "Hard to measure which interventions actually drive adoption"
-      ]
-    },
-    factoryState: {
-      newRole: "Adoption Intelligence Specialist",
-      summary: "Designs agents that create personalized adoption journeys, monitor real-time usage, auto-generate enablement content, and measure intervention effectiveness.",
-      agents: [
-        { name: "Adoption Journey Builder", desc: "Creates personalized, stage-appropriate adoption plans based on customer profile, usage, and goals" },
-        { name: "Usage Analytics Agent", desc: "Real-time monitoring of feature adoption with automatic gap identification and recommendations" },
-        { name: "Enablement Content Generator", desc: "Auto-creates tutorials, guides, and tips tailored to customer's specific deployment and usage patterns" },
-        { name: "Intervention Effectiveness Tracker", desc: "Measures which adoption activities drive real usage changes and recommends next best actions" }
-      ],
-      kpis: [
-        { metric: "Adoption Plan Personalization", before: "Generic template", after: "AI-tailored per customer" },
-        { metric: "Time to First Value", before: "Variable", after: "Reduced 50%+" },
-        { metric: "Content Creation Time", before: "Days per asset", after: "Hours" },
-        { metric: "Feature Adoption Rate", before: "Baseline", after: "+30-50%" }
-      ]
-    },
-    maturityPath: "Generic playbooks → AI-assisted personalization → Agent-driven adoption journeys → Autonomous adoption orchestration"
-  },
-  {
-    id: "support-eng",
-    title: "Support Engineer",
-    abbrev: "SE",
+    id: "ce",
+    title: "Consulting Engineer",
+    abbrev: "CE",
     icon: "wrench",
     color: "red",
     currentState: {
-      summary: "Resolves technical support cases, diagnoses issues, applies fixes, and escalates complex problems — often under SLA pressure.",
+      summary: "The hands-on technical expert in Cisco CX — implements, configures, troubleshoots, and provides expert-level guidance during customer engagements. CEs are the ones who make the technology work in the customer's environment.",
       painPoints: [
-        "Repetitive issues consume time that could go to complex problems",
-        "Knowledge base searches are slow and often miss relevant articles",
-        "Case context is lost during handoffs and escalations",
-        "Root cause analysis is done from scratch each time"
+        "Repetitive configuration and implementation tasks consume time better spent on complex problems",
+        "Troubleshooting often starts from scratch — knowledge trapped in individual expertise",
+        "Context is lost during engagement handoffs between CEs or from CE to TAC",
+        "Documentation of implementation decisions and configurations is inconsistent"
       ]
     },
     factoryState: {
-      newRole: "Support Intelligence Engineer",
-      summary: "Builds and oversees agents that auto-resolve common issues, accelerate diagnosis, maintain case context across handoffs, and mine support data for systemic improvements.",
+      newRole: "Consulting Intelligence Engineer",
+      summary: "Builds and oversees agents that accelerate implementation, automate routine configurations, maintain full engagement context across handoffs, and mine technical knowledge for reuse — letting the CE focus on the complex, high-judgment work.",
       agents: [
-        { name: "Auto-Resolver", desc: "Handles known, documented issues end-to-end with validated fix procedures (with customer confirmation)" },
-        { name: "Diagnostic Accelerator", desc: "Analyzes logs, configurations, and symptoms to suggest probable causes and resolution steps" },
-        { name: "Context Keeper", desc: "Maintains full case narrative across handoffs — no customer ever has to repeat themselves" },
-        { name: "Pattern Miner", desc: "Analyzes case trends to identify systemic issues, bug patterns, and documentation gaps" }
+        { name: "Config Accelerator", desc: "Generates validated configuration templates based on customer requirements and Cisco best practices" },
+        { name: "Diagnostic Accelerator", desc: "Analyzes logs, configs, and symptoms to suggest probable causes and resolution steps from Cisco knowledge" },
+        { name: "Engagement Context Keeper", desc: "Maintains full technical narrative across handoffs — no customer or teammate starts from zero" },
+        { name: "Implementation Pattern Miner", desc: "Captures implementation decisions and outcomes to build a reusable knowledge base of what works" }
       ],
       kpis: [
-        { metric: "First Contact Resolution", before: "40-50%", after: "70%+" },
-        { metric: "Mean Time to Resolve", before: "Hours-Days", after: "Minutes-Hours" },
-        { metric: "Escalation Rate", before: "30%+", after: "< 15%" },
-        { metric: "Known Issue Auto-Resolution", before: "0%", after: "40%+" }
+        { metric: "Routine Config Time", before: "Hours per device", after: "Minutes (template-based)" },
+        { metric: "Troubleshooting Start Time", before: "From scratch", after: "Contextual head start" },
+        { metric: "Handoff Context Loss", before: "Frequent", after: "Near zero" },
+        { metric: "Knowledge Reuse Rate", before: "Low / tribal", after: "80%+ systematic" }
       ]
     },
-    maturityPath: "Manual troubleshooting → AI-assisted diagnosis → Agent-driven resolution → Autonomous support operations"
+    maturityPath: "Manual implementation → AI-assisted configuration → Agent-driven delivery → Autonomous technical operations"
   },
   {
-    id: "cx-pm",
-    title: "CX Program Manager",
-    abbrev: "CX PM",
+    id: "cpm",
+    title: "Customer Program Manager",
+    abbrev: "CPM",
     icon: "layout-dashboard",
     color: "orange",
     currentState: {
-      summary: "Drives cross-functional CX programs, aligns teams around customer outcomes, manages executive reporting, and ensures strategic initiatives deliver results.",
+      summary: "Manages cross-functional customer programs at Cisco CX — aligning CXMs, PMs, CEs, and CDAs around customer outcomes, managing executive reporting, tracking program-level KPIs, and ensuring strategic initiatives deliver measurable results.",
       painPoints: [
-        "Program status is assembled manually from multiple sources",
-        "Cross-team dependencies are tracked in the PM's head",
-        "Executive reporting is a recurring time sink",
-        "Impact measurement is lagging and approximate"
+        "Program status is assembled manually from multiple workstreams and tools",
+        "Cross-team dependencies tracked in the CPM's head or scattered spreadsheets",
+        "Executive reporting is a recurring time sink that pulls focus from strategy",
+        "Impact measurement across the program portfolio is lagging and approximate"
       ]
     },
     factoryState: {
       newRole: "AI Factory Program Lead",
-      summary: "Manages the AI Factory itself — orchestrates the agent portfolio, tracks transformation KPIs, governs the agent lifecycle, and reports impact to executives automatically.",
+      summary: "Manages the AI Factory program itself — orchestrates the agent portfolio across CX functions, tracks transformation KPIs, governs the agent lifecycle, and auto-generates executive impact reports.",
       agents: [
-        { name: "Program Pulse Dashboard", desc: "Real-time program status aggregated from all workstreams, tools, and team updates automatically" },
-        { name: "Dependency Tracker", desc: "Maps and monitors cross-team dependencies with automatic risk flagging on blockers" },
-        { name: "Executive Report Generator", desc: "Auto-compiles executive-ready program reports with KPIs, risks, and recommendations" },
-        { name: "Impact Measurer", desc: "Continuously tracks cycle-time reductions, throughput gains, and ROI across the agent portfolio" }
+        { name: "Program Pulse Dashboard", desc: "Real-time program status aggregated from all CX workstreams, tools, and team updates automatically" },
+        { name: "Dependency Tracker", desc: "Maps and monitors cross-team dependencies with automatic risk flagging on blockers across CXM, PM, CE, CDA" },
+        { name: "Executive Report Generator", desc: "Auto-compiles executive-ready program reports with KPIs, risks, milestones, and recommendations" },
+        { name: "Portfolio Impact Measurer", desc: "Continuously tracks cycle-time reductions, throughput gains, and ROI across the AI Factory agent portfolio" }
       ],
       kpis: [
         { metric: "Program Status Compilation", before: "1-2 days/cycle", after: "Always current" },
@@ -478,22 +379,22 @@ const CX_ROLES = [
     icon: "crown",
     color: "yellow",
     currentState: {
-      summary: "Sets CX strategy, manages P&L, drives organizational effectiveness, and ensures the CX org delivers measurable customer and business outcomes.",
+      summary: "Sets Cisco CX strategy, manages P&L, drives organizational effectiveness, and ensures the CX org delivers measurable customer and business outcomes at scale.",
       painPoints: [
-        "Visibility into real-time org performance is limited",
-        "Strategic decisions based on lagging indicators",
-        "Scaling the team means scaling headcount linearly",
-        "Innovation happens in pockets, not systematically"
+        "Visibility into real-time org performance is limited to periodic reports",
+        "Strategic decisions based on lagging indicators and anecdotal feedback",
+        "Scaling delivery capacity means scaling headcount linearly",
+        "Innovation happens in pockets, not systematically across the organization"
       ]
     },
     factoryState: {
       newRole: "AI Factory Executive",
-      summary: "Leads the AI Factory transformation — sets the vision for agent-powered CX, governs the portfolio, makes investment decisions based on real-time agent performance data, and scales impact exponentially.",
+      summary: "Leads the AI Factory transformation — sets the vision for agent-powered CX, governs the portfolio, makes investment decisions based on real-time agent performance data, and scales CX impact exponentially without linear headcount growth.",
       agents: [
-        { name: "Org Performance Dashboard", desc: "Real-time organizational KPIs across all CX functions, powered by agent and human performance data" },
+        { name: "Org Performance Dashboard", desc: "Real-time organizational KPIs across all CX functions — CXM, PM, CE, CDA, HTOM, CPM — powered by agent and human performance data" },
         { name: "Strategic Signal Aggregator", desc: "Synthesizes customer sentiment, market trends, product signals, and internal metrics into strategic insights" },
         { name: "Investment Recommender", desc: "Analyzes agent ROI data to recommend where to invest next in the AI Factory portfolio" },
-        { name: "Innovation Pipeline Monitor", desc: "Tracks agent ideas from identification through deployment, ensuring systematic innovation flow" }
+        { name: "Innovation Pipeline Monitor", desc: "Tracks agent ideas from identification through deployment, ensuring systematic innovation flow across the CX org" }
       ],
       kpis: [
         { metric: "Decision Latency", before: "Weekly/Monthly cycles", after: "Real-time insights" },
