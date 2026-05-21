@@ -13,7 +13,7 @@ html {
 }
 
 .hero-gradient {
-  background: linear-gradient(-45deg, #0d1b2a, #1b2a4a, #0a2f5c, #003366);
+  background: linear-gradient(-45deg, #171f2d, #1a2332, #04314a, #06506e);
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
@@ -65,7 +65,7 @@ html {
   right: -1.5rem;
   width: 1.5rem;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, #049fd9, #00bceb);
 }
 
 /* Maturity level bar animation */
@@ -75,10 +75,10 @@ html {
 
 /* Glow effect for active states */
 .glow-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(4, 159, 217, 0.3);
 }
-.glow-purple {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+.glow-cisco {
+  box-shadow: 0 0 20px rgba(0, 188, 235, 0.3);
 }
 
 /* Assessment radio buttons */
@@ -86,11 +86,11 @@ html {
   transition: all 0.2s ease;
 }
 .assessment-option:hover {
-  background-color: rgba(59, 130, 246, 0.08);
+  background-color: rgba(4, 159, 217, 0.08);
 }
 .assessment-option.selected {
-  background-color: rgba(59, 130, 246, 0.12);
-  border-color: #3b82f6;
+  background-color: rgba(4, 159, 217, 0.12);
+  border-color: #049fd9;
 }
 
 /* Fade-in animation */
@@ -131,7 +131,7 @@ html {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, #049fd9, #00bceb);
   transition: width 0.3s ease;
 }
 .nav-link:hover::after,
@@ -166,6 +166,6 @@ html {
 /* Print styles */
 @media print {
   .no-print { display: none !important; }
-  .hero-gradient { background: #0d1b2a !important; animation: none !important; }
+  .hero-gradient { background: #171f2d !important; animation: none !important; }
   .section-reveal { opacity: 1 !important; transform: none !important; }
 }
