@@ -181,7 +181,7 @@ const CX_ROLES = [
     icon: "heart-handshake",
     color: "blue",
     currentState: {
-      summary: "The primary customer-facing role in Cisco CX — owns the overall customer experience lifecycle, drives adoption and value realization, manages escalations, and serves as the quarterback of the customer relationship across all CX functions.",
+      summary: "Plays a pivotal role in driving successful adoption and utilization of Cisco technologies and services. Serves as the primary CX point-of-contact for assigned accounts — orchestrating value realization, managing escalations, facilitating business reviews, and aligning cross-functional CX resources to accelerate customer outcomes and growth.",
       painPoints: [
         "Juggling dozens of accounts with no real-time visibility into customer health",
         "Reactive firefighting — issues surface through complaints, not early signals",
@@ -214,7 +214,7 @@ const CX_ROLES = [
     icon: "settings",
     color: "violet",
     currentState: {
-      summary: "Oversees operational delivery for Cisco's highest-value customers — coordinating resources, tracking SLA compliance, managing complex multi-workstream engagements, and ensuring operational excellence across the delivery lifecycle.",
+      summary: "Acts as a strategic support consultant for Cisco's highest-value customers — establishing deep relationships with senior-level operations executives, proactively addressing business and operational constraints, leading cross-functional teams to resolve critical incidents, presenting monthly and quarterly reviews, and reviewing historic customer data to identify trends and enable problem management.",
       painPoints: [
         "Manually tracking SLAs and deliverables across multiple concurrent engagements",
         "Resource coordination across global time zones is error-prone and slow",
@@ -247,7 +247,7 @@ const CX_ROLES = [
     icon: "gantt-chart",
     color: "sky",
     currentState: {
-      summary: "Manages customer implementation projects end-to-end — planning, scheduling, resource coordination, risk management, and stakeholder communication across CX delivery engagements.",
+      summary: "Leads cross-functional project teams responsible for delivering Cisco professional services to enterprise customers — managing project scope, schedule, budget, risk, resource coordination, and stakeholder communication throughout the full delivery lifecycle from initiation through closure.",
       painPoints: [
         "Project plans go stale within days of creation as realities shift",
         "Manual dependency tracking across CEs, CDAs, and customer teams leads to missed handoffs",
@@ -280,7 +280,7 @@ const CX_ROLES = [
     icon: "blocks",
     color: "emerald",
     currentState: {
-      summary: "The technical architecture lead for customer deliveries — designs solutions, validates technical approaches, creates high-level and low-level designs, and ensures implementations align with Cisco best practices and customer requirements.",
+      summary: "Leads all technical cross-architecture activities and deliverables across the CX services solution portfolio. Works as a trusted advisor from technical staff to CXO level — ensuring Cisco strategy conforms to customer requirements, providing thought leadership in emerging technologies, and identifying challenges and growth opportunities where Cisco solutions can drive business value.",
       painPoints: [
         "Recreating similar architecture designs from scratch for each engagement",
         "Keeping up with rapidly evolving Cisco product capabilities and compatibility",
@@ -313,7 +313,7 @@ const CX_ROLES = [
     icon: "wrench",
     color: "red",
     currentState: {
-      summary: "The hands-on technical expert in Cisco CX — implements, configures, troubleshoots, and provides expert-level guidance during customer engagements. CEs are the ones who make the technology work in the customer's environment.",
+      summary: "A technical consulting specialist engaging directly with customers to help them adopt the Cisco products and solutions they purchase — enabling solution architecture with proven business outcomes, performing implementation and configuration, troubleshooting complex issues, and delivering knowledge transfer that drives customer loyalty, satisfaction, and technology-led growth.",
       painPoints: [
         "Repetitive configuration and implementation tasks consume time better spent on complex problems",
         "Troubleshooting often starts from scratch — knowledge trapped in individual expertise",
@@ -346,7 +346,7 @@ const CX_ROLES = [
     icon: "truck",
     color: "indigo",
     currentState: {
-      summary: "Owns end-to-end service delivery for Cisco CX customers — ensures contracted services are delivered on time, coordinates across CEs, CDAs, and PMs, manages service-level commitments, and serves as the single point of accountability for delivery quality and customer satisfaction.",
+      summary: "Sets the strategic services direction and builds trusted advisor relationships with customers, focused on outcomes. Partners with senior leaders across Delivery, Customer Success, Sales, Operations, and Engineering to operationally manage professional services engagements — ensuring contracted services are delivered on time while coordinating across CEs, CDAs, and PMs as the single point of accountability for delivery quality.",
       painPoints: [
         "Manually tracking delivery milestones, entitlements, and consumption across multiple service contracts",
         "Coordinating delivery teams (CEs, CDAs, PMs) across engagements without real-time visibility",
@@ -379,7 +379,7 @@ const CX_ROLES = [
     icon: "layout-dashboard",
     color: "orange",
     currentState: {
-      summary: "Manages cross-functional customer programs at Cisco CX — aligning CXMs, PMs, CEs, and CDAs around customer outcomes, managing executive reporting, tracking program-level KPIs, and ensuring strategic initiatives deliver measurable results.",
+      summary: "Leads cross-functional teams responsible for major customer lifecycle management and technology refresh programs. Aligns CXMs, PMs, CEs, and CDAs around customer outcomes — managing executive reporting, tracking program-level KPIs, contributing to the Program Manager role community, and ensuring strategic initiatives deliver measurable business results at scale.",
       painPoints: [
         "Program status is assembled manually from multiple workstreams and tools",
         "Cross-team dependencies tracked in the CPM's head or scattered spreadsheets",
@@ -412,7 +412,7 @@ const CX_ROLES = [
     icon: "crown",
     color: "yellow",
     currentState: {
-      summary: "Sets Cisco CX strategy, manages P&L, drives organizational effectiveness, and ensures the CX org delivers measurable customer and business outcomes at scale.",
+      summary: "Sets Cisco CX strategy, manages P&L, and drives organizational effectiveness across the full CX portfolio. Responsible for ensuring the CX organization delivers measurable customer and business outcomes at scale — aligning CXM, HTOM, PM, CDA, CE, SDM, and CPM functions toward unified customer success.",
       painPoints: [
         "Visibility into real-time org performance is limited to periodic reports",
         "Strategic decisions based on lagging indicators and anecdotal feedback",
