@@ -200,7 +200,7 @@
                   </div>
                   <div>
                     <h3 class="font-bold text-lg" x-text="role.title"></h3>
-                    <p class="text-sm text-slate-500" x-text="role.currentState.summary.substring(0, 80) + '...'"></p>
+                    <p class="text-sm text-slate-500" x-text="expandedRole === role.id ? role.currentState.summary : role.currentState.summary.substring(0, 80) + '...'"></p>
                   </div>
                 </div>
                 <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform" :class="expandedRole === role.id ? 'rotate-180' : ''"></i>
