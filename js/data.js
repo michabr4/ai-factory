@@ -340,6 +340,39 @@ const CX_ROLES = [
     maturityPath: "Manual implementation → AI-assisted configuration → Agent-driven delivery → Autonomous technical operations"
   },
   {
+    id: "sdm",
+    title: "Service Delivery Manager",
+    abbrev: "SDM",
+    icon: "truck",
+    color: "indigo",
+    currentState: {
+      summary: "Owns end-to-end service delivery for Cisco CX customers — ensures contracted services are delivered on time, coordinates across CEs, CDAs, and PMs, manages service-level commitments, and serves as the single point of accountability for delivery quality and customer satisfaction.",
+      painPoints: [
+        "Manually tracking delivery milestones, entitlements, and consumption across multiple service contracts",
+        "Coordinating delivery teams (CEs, CDAs, PMs) across engagements without real-time visibility",
+        "Customer communication about delivery status is reactive and labor-intensive",
+        "Service gaps and underutilization of contracted entitlements go undetected until reviews"
+      ]
+    },
+    factoryState: {
+      newRole: "Service Delivery Intelligence Lead",
+      summary: "Orchestrates agents that provide real-time delivery visibility, automate entitlement tracking, predict service gaps before they impact customers, and draft proactive delivery communications — letting the SDM focus on strategic service optimization and customer outcomes.",
+      agents: [
+        { name: "Delivery Tracker", desc: "Real-time dashboard of all active service deliveries, milestones, and entitlement consumption across the SDM's portfolio" },
+        { name: "Entitlement Monitor", desc: "Tracks contracted vs. consumed services and flags underutilization or overrun before they become issues" },
+        { name: "Service Gap Predictor", desc: "Analyzes delivery patterns, resource availability, and contract timelines to predict gaps and recommend corrective actions" },
+        { name: "Delivery Comms Drafter", desc: "Auto-generates customer-facing delivery status updates and service reports (human approves before send)" }
+      ],
+      kpis: [
+        { metric: "Delivery Visibility", before: "Weekly manual checks", after: "Real-time dashboard" },
+        { metric: "Entitlement Utilization", before: "Discovered at QBR", after: "Continuously tracked" },
+        { metric: "Service Gap Detection", before: "Reactive", after: "Predictive (weeks ahead)" },
+        { metric: "Status Report Time", before: "4-6 hours/cycle", after: "Auto-generated" }
+      ]
+    },
+    maturityPath: "Manual service tracking → AI-assisted monitoring → Agent-driven delivery management → Autonomous service orchestration"
+  },
+  {
     id: "cpm",
     title: "Customer Program Manager",
     abbrev: "CPM",
@@ -391,7 +424,7 @@ const CX_ROLES = [
       newRole: "AI Factory Executive",
       summary: "Leads the AI Factory transformation — sets the vision for agent-powered CX, governs the portfolio, makes investment decisions based on real-time agent performance data, and scales CX impact exponentially without linear headcount growth.",
       agents: [
-        { name: "Org Performance Dashboard", desc: "Real-time organizational KPIs across all CX functions — CXM, PM, CE, CDA, HTOM, CPM — powered by agent and human performance data" },
+        { name: "Org Performance Dashboard", desc: "Real-time organizational KPIs across all CX functions — CXM, HTOM, PM, CDA, CE, SDM, CPM — powered by agent and human performance data" },
         { name: "Strategic Signal Aggregator", desc: "Synthesizes customer sentiment, market trends, product signals, and internal metrics into strategic insights" },
         { name: "Investment Recommender", desc: "Analyzes agent ROI data to recommend where to invest next in the AI Factory portfolio" },
         { name: "Innovation Pipeline Monitor", desc: "Tracks agent ideas from identification through deployment, ensuring systematic innovation flow across the CX org" }
